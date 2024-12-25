@@ -1,0 +1,28 @@
+# Environment
+.env*
+.ruby-version
+.ruby-gemset
+
+# Dependencies
+/vendor/bundle
+.bundle
+
+# Logs
+/log/*
+!/log/.keep
+
+# Temporary files
+/tmp/*
+!/tmp/.keep
+.byebug_history
+
+# Database
+/db/*.sqlite3
+/db/*.sqlite3-journal
+/db/*.sqlite3-[0-9]*
+
+# Coverage
+/coverage/
+
+# Node
+node_modules/

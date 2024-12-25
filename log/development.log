@@ -1,0 +1,475 @@
+[dotenv] Set [36mMOVELY_DATABASE_USERNAME[0m and [36mMOVELY_DATABASE_PASSWORD[0m
+[dotenv] Loaded [33m.env.local[0m
+  [1m[35m (101.5ms)[0m  [1m[35mCREATE DATABASE "movely_development" ENCODING = 'unicode' /*application='Movely'*/[0m
+[dotenv] Set [36mMOVELY_DATABASE_USERNAME[0m and [36mMOVELY_DATABASE_PASSWORD[0m
+[dotenv] Loaded [33m.env.local[0m
+  [1m[35m (103.3ms)[0m  [1m[35mCREATE DATABASE "movely_development" ENCODING = 'unicode' /*application='Movely'*/[0m
+[dotenv] Set [36mMOVELY_DATABASE_USERNAME[0m and [36mMOVELY_DATABASE_PASSWORD[0m
+[dotenv] Loaded [33m.env.local[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[35mSET search_path TO public /*application='Movely'*/[0m
+  [1m[35m (117.8ms)[0m  [1m[35mCREATE DATABASE "movely_development" ENCODING = 'unicode' /*application='Movely'*/[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[35mSET search_path TO public /*application='Movely'*/[0m
+  [1m[35m (102.4ms)[0m  [1m[35mCREATE DATABASE "movely_test" ENCODING = 'unicode' /*application='Movely'*/[0m
+[dotenv] Set [36mMOVELY_DATABASE_USERNAME[0m and [36mMOVELY_DATABASE_PASSWORD[0m
+[dotenv] Loaded [33m.env.local[0m
+[dotenv] Set [36mMOVELY_DATABASE_USERNAME[0m and [36mMOVELY_DATABASE_PASSWORD[0m
+[dotenv] Loaded [33m.env.local[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[35mSET search_path TO public /*application='Movely'*/[0m
+  [1m[35m (15.3ms)[0m  [1m[35mCREATE DATABASE "movely_development" ENCODING = 'unicode' /*application='Movely'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[35mSET search_path TO public /*application='Movely'*/[0m
+  [1m[35m (13.6ms)[0m  [1m[35mCREATE DATABASE "movely_test" ENCODING = 'unicode' /*application='Movely'*/[0m
+[dotenv] Set [36mMOVELY_DATABASE_USERNAME[0m and [36mMOVELY_DATABASE_PASSWORD[0m
+[dotenv] Loaded [33m.env.local[0m
+  [1m[35m (9.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY) /*application='Movely'*/[0m
+  [1m[35m (8.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Movely'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2399443627008332415) /*application='Movely'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Movely'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Movely'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (2.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2024-12-25 18:24:30.226802', '2024-12-25 18:24:30.226804') RETURNING "key" /*application='Movely'*/[0m
+Migrating to CreateUsers (20241225182248)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Movely'*/[0m
+  [1m[35m (5.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Movely'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20241225182248') RETURNING "version" /*application='Movely'*/[0m
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT /*application='Movely'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(2399443627008332415) /*application='Movely'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Movely'*/[0m
+[dotenv] Set [36mMOVELY_DATABASE_USERNAME[0m and [36mMOVELY_DATABASE_PASSWORD[0m
+[dotenv] Loaded [33m.env.local[0m
+[dotenv] Set [36mMOVELY_DATABASE_USERNAME[0m and [36mMOVELY_DATABASE_PASSWORD[0m
+[dotenv] Loaded [33m.env.local[0m
+[dotenv] Set [36mMOVELY_DATABASE_USERNAME[0m and [36mMOVELY_DATABASE_PASSWORD[0m
+[dotenv] Loaded [33m.env.local[0m
+[dotenv] Set [36mMOVELY_DATABASE_USERNAME[0m and [36mMOVELY_DATABASE_PASSWORD[0m
+[dotenv] Loaded [33m.env.local[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2399443627008332415) /*application='Movely'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Movely'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Movely'*/[0m
+Migrating to CreateProperties (20241225182520)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Movely'*/[0m
+  [1m[35m (10.6ms)[0m  [1m[35mCREATE TABLE "properties" ("id" bigserial primary key, "user_id" bigint, "address" text NOT NULL, "price" decimal, "square_footage" integer, "bedrooms" integer, "bathrooms" integer, "hoa_info" jsonb, "overall_rating" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_e41321a67c"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+) /*application='Movely'*/[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE INDEX "index_properties_on_user_id" ON "properties" ("user_id") /*application='Movely'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20241225182520') RETURNING "version" /*application='Movely'*/[0m
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[35mCOMMIT /*application='Movely'*/[0m
+Migrating to CreatePropertyRatings (20241225182529)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Movely'*/[0m
+  [1m[35m (5.3ms)[0m  [1m[35mCREATE TABLE "property_ratings" ("id" bigserial primary key, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Movely'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20241225182529') RETURNING "version" /*application='Movely'*/[0m
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT /*application='Movely'*/[0m
+Migrating to CreatePropertyImages (20241225182536)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN /*application='Movely'*/[0m
+  [1m[35m (4.6ms)[0m  [1m[35mCREATE TABLE "property_images" ("id" bigserial primary key, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Movely'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20241225182536') RETURNING "version" /*application='Movely'*/[0m
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT /*application='Movely'*/[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(2399443627008332415) /*application='Movely'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Movely'*/[0m
+[dotenv] Set [36mMOVELY_DATABASE_USERNAME[0m and [36mMOVELY_DATABASE_PASSWORD[0m
+[dotenv] Loaded [33m.env.local[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2399443627008332415) /*application='Movely'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Movely'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Movely'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(2399443627008332415) /*application='Movely'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Movely'*/[0m
+[dotenv] Set [36mMOVELY_DATABASE_USERNAME[0m and [36mMOVELY_DATABASE_PASSWORD[0m
+[dotenv] Loaded [33m.env.local[0m
+[dotenv] Set [36mMOVELY_DATABASE_USERNAME[0m and [36mMOVELY_DATABASE_PASSWORD[0m
+[dotenv] Loaded [33m.env.local[0m
+[dotenv] Set [36mMOVELY_DATABASE_USERNAME[0m and [36mMOVELY_DATABASE_PASSWORD[0m
+[dotenv] Loaded [33m.env.local[0m
+[dotenv] Set [36mMOVELY_DATABASE_USERNAME[0m and [36mMOVELY_DATABASE_PASSWORD[0m
+[dotenv] Loaded [33m.env.local[0m
+[dotenv] Set [36mMOVELY_DATABASE_USERNAME[0m and [36mMOVELY_DATABASE_PASSWORD[0m
+[dotenv] Loaded [33m.env.local[0m
+[dotenv] Set [36mMOVELY_DATABASE_USERNAME[0m and [36mMOVELY_DATABASE_PASSWORD[0m
+[dotenv] Loaded [33m.env.local[0m
+[dotenv] Set [36mMOVELY_DATABASE_USERNAME[0m and [36mMOVELY_DATABASE_PASSWORD[0m
+[dotenv] Loaded [33m.env.local[0m
+[dotenv] Set [36mMOVELY_DATABASE_USERNAME[0m and [36mMOVELY_DATABASE_PASSWORD[0m
+[dotenv] Loaded [33m.env.local[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2399443627008332415) /*application='Movely'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Movely'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Movely'*/[0m
+Migrating to CreatePropertyImages (20241225182909)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Movely'*/[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "property_images" ("id" bigserial primary key, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Movely'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK /*application='Movely'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2399443627008332415) /*application='Movely'*/[0m
+[dotenv] Set [36mMOVELY_DATABASE_USERNAME[0m and [36mMOVELY_DATABASE_PASSWORD[0m
+[dotenv] Loaded [33m.env.local[0m
+[dotenv] Set [36mMOVELY_DATABASE_USERNAME[0m and [36mMOVELY_DATABASE_PASSWORD[0m
+[dotenv] Loaded [33m.env.local[0m
+[dotenv] Set [36mMOVELY_DATABASE_USERNAME[0m and [36mMOVELY_DATABASE_PASSWORD[0m
+[dotenv] Loaded [33m.env.local[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2399443627008332415) /*application='Movely'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Movely'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Movely'*/[0m
+Migrating to CreatePropertyImages (20241225182909)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Movely'*/[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "property_images" ("id" bigserial primary key, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Movely'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK /*application='Movely'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2399443627008332415) /*application='Movely'*/[0m
+[dotenv] Set [36mMOVELY_DATABASE_USERNAME[0m and [36mMOVELY_DATABASE_PASSWORD[0m
+[dotenv] Loaded [33m.env.local[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Movely'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Movely'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Movely'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Movely'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Movely'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Movely'*/[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[35mSET search_path TO public /*application='Movely'*/[0m
+  [1m[35m (52.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "movely_development" /*application='Movely'*/[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[35mSET search_path TO public /*application='Movely'*/[0m
+  [1m[35m (56.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "movely_test" /*application='Movely'*/[0m
+[dotenv] Set [36mMOVELY_DATABASE_USERNAME[0m and [36mMOVELY_DATABASE_PASSWORD[0m
+[dotenv] Loaded [33m.env.local[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[35mSET search_path TO public /*application='Movely'*/[0m
+  [1m[35m (49.1ms)[0m  [1m[35mCREATE DATABASE "movely_development" ENCODING = 'unicode' /*application='Movely'*/[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[35mSET search_path TO public /*application='Movely'*/[0m
+  [1m[35m (45.6ms)[0m  [1m[35mCREATE DATABASE "movely_test" ENCODING = 'unicode' /*application='Movely'*/[0m
+[dotenv] Set [36mMOVELY_DATABASE_USERNAME[0m and [36mMOVELY_DATABASE_PASSWORD[0m
+[dotenv] Loaded [33m.env.local[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql" SCHEMA pg_catalog /*application='Movely'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "properties" CASCADE /*application='Movely'*/[0m
+  [1m[35m (9.0ms)[0m  [1m[35mCREATE TABLE "properties" ("id" bigserial primary key, "user_id" bigint, "address" text NOT NULL, "price" decimal, "square_footage" integer, "bedrooms" integer, "bathrooms" integer, "hoa_info" jsonb, "overall_rating" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Movely'*/[0m
+  [1m[35m (5.9ms)[0m  [1m[35mCREATE INDEX "index_properties_on_user_id" ON "properties" ("user_id") /*application='Movely'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "property_images" CASCADE /*application='Movely'*/[0m
+  [1m[35m (6.1ms)[0m  [1m[35mCREATE TABLE "property_images" ("id" bigserial primary key, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Movely'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "property_ratings" CASCADE /*application='Movely'*/[0m
+  [1m[35m (5.4ms)[0m  [1m[35mCREATE TABLE "property_ratings" ("id" bigserial primary key, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Movely'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE /*application='Movely'*/[0m
+  [1m[35m (5.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Movely'*/[0m
+  [1m[35m (2.8ms)[0m  [1m[35mALTER TABLE "properties" ADD CONSTRAINT "fk_rails_e41321a67c"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+ /*application='Movely'*/[0m
+  [1m[35m (8.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY) /*application='Movely'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Movely'*/[0m
+  [1m[35m (2.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20241225182536) /*application='Movely'*/[0m
+  [1m[35m (2.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20241225182520),
+(20241225182248); /*application='Movely'*/[0m
+  [1m[35m (8.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Movely'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Movely'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (2.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2024-12-25 18:33:29.717579', '2024-12-25 18:33:29.717581') RETURNING "key" /*application='Movely'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Movely'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'schema_sha1' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Movely'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (2.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('schema_sha1', 'e38bff873fdecdce678d5cfafcf0b397e6314a7d', '2024-12-25 18:33:29.724432', '2024-12-25 18:33:29.724462') RETURNING "key" /*application='Movely'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2399443627008332415) /*application='Movely'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Movely'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Movely'*/[0m
+Migrating to CreatePropertyImages (20241225182909)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Movely'*/[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE TABLE "property_images" ("id" bigserial primary key, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Movely'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK /*application='Movely'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(2399443627008332415) /*application='Movely'*/[0m
+[dotenv] Set [36mMOVELY_DATABASE_USERNAME[0m and [36mMOVELY_DATABASE_PASSWORD[0m
+[dotenv] Loaded [33m.env.local[0m
+[dotenv] Set [36mMOVELY_DATABASE_USERNAME[0m and [36mMOVELY_DATABASE_PASSWORD[0m
+[dotenv] Loaded [33m.env.local[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[35mSET search_path TO public /*application='Movely'*/[0m
+  [1m[35m (15.3ms)[0m  [1m[35mCREATE DATABASE "movely_development" ENCODING = 'unicode' /*application='Movely'*/[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[35mSET search_path TO public /*application='Movely'*/[0m
+  [1m[35m (13.4ms)[0m  [1m[35mCREATE DATABASE "movely_test" ENCODING = 'unicode' /*application='Movely'*/[0m
+[dotenv] Set [36mMOVELY_DATABASE_USERNAME[0m and [36mMOVELY_DATABASE_PASSWORD[0m
+[dotenv] Loaded [33m.env.local[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2399443627008332415) /*application='Movely'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Movely'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Movely'*/[0m
+Migrating to CreatePropertyRatings (20241225183446)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Movely'*/[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "property_ratings" ("id" bigserial primary key, "property_id" bigint, "category" character varying, "score" integer, "notes" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_ed2893c204"
+FOREIGN KEY ("property_id")
+  REFERENCES "properties" ("id")
+) /*application='Movely'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK /*application='Movely'*/[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2399443627008332415) /*application='Movely'*/[0m
+[dotenv] Set [36mMOVELY_DATABASE_USERNAME[0m and [36mMOVELY_DATABASE_PASSWORD[0m
+[dotenv] Loaded [33m.env.local[0m
+[dotenv] Set [36mMOVELY_DATABASE_USERNAME[0m and [36mMOVELY_DATABASE_PASSWORD[0m
+[dotenv] Loaded [33m.env.local[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2399443627008332415) /*application='Movely'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Movely'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Movely'*/[0m
+Migrating to CreatePropertyRatings (20241225183446)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Movely'*/[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "property_ratings" ("id" bigserial primary key, "property_id" bigint, "category" character varying, "score" integer, "notes" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_ed2893c204"
+FOREIGN KEY ("property_id")
+  REFERENCES "properties" ("id")
+) /*application='Movely'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK /*application='Movely'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2399443627008332415) /*application='Movely'*/[0m
+[dotenv] Set [36mMOVELY_DATABASE_USERNAME[0m and [36mMOVELY_DATABASE_PASSWORD[0m
+[dotenv] Loaded [33m.env.local[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Movely'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Movely'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Movely'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Movely'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Movely'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Movely'*/[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[35mSET search_path TO public /*application='Movely'*/[0m
+  [1m[35m (635.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "movely_development" /*application='Movely'*/[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[35mSET search_path TO public /*application='Movely'*/[0m
+  [1m[35m (56.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "movely_test" /*application='Movely'*/[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[35mSET search_path TO public /*application='Movely'*/[0m
+  [1m[35m (32.9ms)[0m  [1m[35mCREATE DATABASE "movely_development" ENCODING = 'unicode' /*application='Movely'*/[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[35mSET search_path TO public /*application='Movely'*/[0m
+  [1m[35m (33.4ms)[0m  [1m[35mCREATE DATABASE "movely_test" ENCODING = 'unicode' /*application='Movely'*/[0m
+  [1m[35mSQL (13.0ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql" SCHEMA pg_catalog /*application='Movely'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "properties" CASCADE /*application='Movely'*/[0m
+  [1m[35m (9.5ms)[0m  [1m[35mCREATE TABLE "properties" ("id" bigserial primary key, "user_id" bigint, "address" text NOT NULL, "price" decimal, "square_footage" integer, "bedrooms" integer, "bathrooms" integer, "hoa_info" jsonb, "overall_rating" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Movely'*/[0m
+  [1m[35m (5.7ms)[0m  [1m[35mCREATE INDEX "index_properties_on_user_id" ON "properties" ("user_id") /*application='Movely'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "property_images" CASCADE /*application='Movely'*/[0m
+  [1m[35m (5.4ms)[0m  [1m[35mCREATE TABLE "property_images" ("id" bigserial primary key, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Movely'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "property_ratings" CASCADE /*application='Movely'*/[0m
+  [1m[35m (5.4ms)[0m  [1m[35mCREATE TABLE "property_ratings" ("id" bigserial primary key, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Movely'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE /*application='Movely'*/[0m
+  [1m[35m (5.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Movely'*/[0m
+  [1m[35m (2.7ms)[0m  [1m[35mALTER TABLE "properties" ADD CONSTRAINT "fk_rails_e41321a67c"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+ /*application='Movely'*/[0m
+  [1m[35m (8.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY) /*application='Movely'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Movely'*/[0m
+  [1m[35m (2.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20241225182536) /*application='Movely'*/[0m
+  [1m[35m (2.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20241225182520),
+(20241225182248); /*application='Movely'*/[0m
+  [1m[35m (8.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Movely'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Movely'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (2.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2024-12-25 18:37:55.361193', '2024-12-25 18:37:55.361195') RETURNING "key" /*application='Movely'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Movely'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'schema_sha1' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Movely'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (2.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('schema_sha1', 'e38bff873fdecdce678d5cfafcf0b397e6314a7d', '2024-12-25 18:37:55.367581', '2024-12-25 18:37:55.367583') RETURNING "key" /*application='Movely'*/[0m
+  [1m[35mSQL (5.5ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql" SCHEMA pg_catalog /*application='Movely'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "properties" CASCADE /*application='Movely'*/[0m
+  [1m[35m (9.9ms)[0m  [1m[35mCREATE TABLE "properties" ("id" bigserial primary key, "user_id" bigint, "address" text NOT NULL, "price" decimal, "square_footage" integer, "bedrooms" integer, "bathrooms" integer, "hoa_info" jsonb, "overall_rating" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Movely'*/[0m
+  [1m[35m (5.7ms)[0m  [1m[35mCREATE INDEX "index_properties_on_user_id" ON "properties" ("user_id") /*application='Movely'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "property_images" CASCADE /*application='Movely'*/[0m
+  [1m[35m (5.5ms)[0m  [1m[35mCREATE TABLE "property_images" ("id" bigserial primary key, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Movely'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "property_ratings" CASCADE /*application='Movely'*/[0m
+  [1m[35m (5.4ms)[0m  [1m[35mCREATE TABLE "property_ratings" ("id" bigserial primary key, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Movely'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE /*application='Movely'*/[0m
+  [1m[35m (5.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Movely'*/[0m
+  [1m[35m (2.7ms)[0m  [1m[35mALTER TABLE "properties" ADD CONSTRAINT "fk_rails_e41321a67c"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+ /*application='Movely'*/[0m
+  [1m[35m (9.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY) /*application='Movely'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Movely'*/[0m
+  [1m[35m (2.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20241225182536) /*application='Movely'*/[0m
+  [1m[35m (2.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20241225182520),
+(20241225182248); /*application='Movely'*/[0m
+  [1m[35m (8.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Movely'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Movely'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (2.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2024-12-25 18:37:55.456450', '2024-12-25 18:37:55.456452') RETURNING "key" /*application='Movely'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Movely'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Update (2.1ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = 'test', "updated_at" = '2024-12-25 18:37:55.459905' WHERE "ar_internal_metadata"."key" = 'environment' /*application='Movely'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'schema_sha1' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Movely'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (2.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('schema_sha1', 'e38bff873fdecdce678d5cfafcf0b397e6314a7d', '2024-12-25 18:37:55.463109', '2024-12-25 18:37:55.463110') RETURNING "key" /*application='Movely'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Movely'*/[0m
+[dotenv] Set [36mMOVELY_DATABASE_USERNAME[0m and [36mMOVELY_DATABASE_PASSWORD[0m
+[dotenv] Loaded [33m.env.local[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2399443627008332415) /*application='Movely'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Movely'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Movely'*/[0m
+Migrating to CreatePropertyRatings (20241225183446)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Movely'*/[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "property_ratings" ("id" bigserial primary key, "property_id" bigint, "category" character varying, "score" integer, "notes" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_ed2893c204"
+FOREIGN KEY ("property_id")
+  REFERENCES "properties" ("id")
+) /*application='Movely'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK /*application='Movely'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2399443627008332415) /*application='Movely'*/[0m
+[dotenv] Set [36mMOVELY_DATABASE_USERNAME[0m and [36mMOVELY_DATABASE_PASSWORD[0m
+[dotenv] Loaded [33m.env.local[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Movely'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Movely'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Movely'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Movely'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Movely'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Movely'*/[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[35mSET search_path TO public /*application='Movely'*/[0m
+  [1m[35m (675.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "movely_development" /*application='Movely'*/[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[35mSET search_path TO public /*application='Movely'*/[0m
+  [1m[35m (57.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "movely_test" /*application='Movely'*/[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[35mSET search_path TO public /*application='Movely'*/[0m
+  [1m[35m (35.3ms)[0m  [1m[35mCREATE DATABASE "movely_development" ENCODING = 'unicode' /*application='Movely'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[35mSET search_path TO public /*application='Movely'*/[0m
+  [1m[35m (30.4ms)[0m  [1m[35mCREATE DATABASE "movely_test" ENCODING = 'unicode' /*application='Movely'*/[0m
+  [1m[35mSQL (12.5ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql" SCHEMA pg_catalog /*application='Movely'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "properties" CASCADE /*application='Movely'*/[0m
+  [1m[35m (10.0ms)[0m  [1m[35mCREATE TABLE "properties" ("id" bigserial primary key, "user_id" bigint, "address" text NOT NULL, "price" decimal, "square_footage" integer, "bedrooms" integer, "bathrooms" integer, "hoa_info" jsonb, "overall_rating" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Movely'*/[0m
+  [1m[35m (5.8ms)[0m  [1m[35mCREATE INDEX "index_properties_on_user_id" ON "properties" ("user_id") /*application='Movely'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "property_images" CASCADE /*application='Movely'*/[0m
+  [1m[35m (5.5ms)[0m  [1m[35mCREATE TABLE "property_images" ("id" bigserial primary key, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Movely'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "property_ratings" CASCADE /*application='Movely'*/[0m
+  [1m[35m (5.4ms)[0m  [1m[35mCREATE TABLE "property_ratings" ("id" bigserial primary key, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Movely'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE /*application='Movely'*/[0m
+  [1m[35m (5.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Movely'*/[0m
+  [1m[35m (2.7ms)[0m  [1m[35mALTER TABLE "properties" ADD CONSTRAINT "fk_rails_e41321a67c"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+ /*application='Movely'*/[0m
+  [1m[35m (9.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY) /*application='Movely'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Movely'*/[0m
+  [1m[35m (2.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20241225182536) /*application='Movely'*/[0m
+  [1m[35m (2.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20241225182520),
+(20241225182248); /*application='Movely'*/[0m
+  [1m[35m (8.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Movely'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Movely'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (2.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2024-12-25 18:38:39.441720', '2024-12-25 18:38:39.441722') RETURNING "key" /*application='Movely'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Movely'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'schema_sha1' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Movely'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (2.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('schema_sha1', 'e38bff873fdecdce678d5cfafcf0b397e6314a7d', '2024-12-25 18:38:39.448194', '2024-12-25 18:38:39.448195') RETURNING "key" /*application='Movely'*/[0m
+  [1m[35mSQL (5.6ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql" SCHEMA pg_catalog /*application='Movely'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "properties" CASCADE /*application='Movely'*/[0m
+  [1m[35m (9.9ms)[0m  [1m[35mCREATE TABLE "properties" ("id" bigserial primary key, "user_id" bigint, "address" text NOT NULL, "price" decimal, "square_footage" integer, "bedrooms" integer, "bathrooms" integer, "hoa_info" jsonb, "overall_rating" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Movely'*/[0m
+  [1m[35m (5.1ms)[0m  [1m[35mCREATE INDEX "index_properties_on_user_id" ON "properties" ("user_id") /*application='Movely'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "property_images" CASCADE /*application='Movely'*/[0m
+  [1m[35m (5.5ms)[0m  [1m[35mCREATE TABLE "property_images" ("id" bigserial primary key, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Movely'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "property_ratings" CASCADE /*application='Movely'*/[0m
+  [1m[35m (5.3ms)[0m  [1m[35mCREATE TABLE "property_ratings" ("id" bigserial primary key, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Movely'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE /*application='Movely'*/[0m
+  [1m[35m (6.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Movely'*/[0m
+  [1m[35m (2.7ms)[0m  [1m[35mALTER TABLE "properties" ADD CONSTRAINT "fk_rails_e41321a67c"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+ /*application='Movely'*/[0m
+  [1m[35m (8.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY) /*application='Movely'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Movely'*/[0m
+  [1m[35m (2.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20241225182536) /*application='Movely'*/[0m
+  [1m[35m (2.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20241225182520),
+(20241225182248); /*application='Movely'*/[0m
+  [1m[35m (8.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Movely'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Movely'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (2.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2024-12-25 18:38:39.535527', '2024-12-25 18:38:39.535529') RETURNING "key" /*application='Movely'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Movely'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Update (2.5ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = 'test', "updated_at" = '2024-12-25 18:38:39.539456' WHERE "ar_internal_metadata"."key" = 'environment' /*application='Movely'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'schema_sha1' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Movely'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (2.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('schema_sha1', 'e38bff873fdecdce678d5cfafcf0b397e6314a7d', '2024-12-25 18:38:39.543060', '2024-12-25 18:38:39.543061') RETURNING "key" /*application='Movely'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Movely'*/[0m
+[dotenv] Set [36mMOVELY_DATABASE_USERNAME[0m and [36mMOVELY_DATABASE_PASSWORD[0m
+[dotenv] Loaded [33m.env.local[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[35mSET search_path TO public /*application='Movely'*/[0m
+  [1m[35m (685.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "movely_development" /*application='Movely'*/[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[35mSET search_path TO public /*application='Movely'*/[0m
+  [1m[35m (50.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "movely_test" /*application='Movely'*/[0m
+[dotenv] Set [36mMOVELY_DATABASE_USERNAME[0m and [36mMOVELY_DATABASE_PASSWORD[0m
+[dotenv] Loaded [33m.env.local[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[35mSET search_path TO public /*application='Movely'*/[0m
+  [1m[35m (41.9ms)[0m  [1m[35mCREATE DATABASE "movely_development" ENCODING = 'unicode' /*application='Movely'*/[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[35mSET search_path TO public /*application='Movely'*/[0m
+  [1m[35m (39.0ms)[0m  [1m[35mCREATE DATABASE "movely_test" ENCODING = 'unicode' /*application='Movely'*/[0m
+[dotenv] Set [36mMOVELY_DATABASE_USERNAME[0m and [36mMOVELY_DATABASE_PASSWORD[0m
+[dotenv] Loaded [33m.env.local[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql" SCHEMA pg_catalog /*application='Movely'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "properties" CASCADE /*application='Movely'*/[0m
+  [1m[35m (10.8ms)[0m  [1m[35mCREATE TABLE "properties" ("id" bigserial primary key, "user_id" bigint, "address" text NOT NULL, "price" decimal, "square_footage" integer, "bedrooms" integer, "bathrooms" integer, "hoa_info" jsonb, "overall_rating" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Movely'*/[0m
+  [1m[35m (5.3ms)[0m  [1m[35mCREATE INDEX "index_properties_on_user_id" ON "properties" ("user_id") /*application='Movely'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "property_images" CASCADE /*application='Movely'*/[0m
+  [1m[35m (6.5ms)[0m  [1m[35mCREATE TABLE "property_images" ("id" bigserial primary key, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Movely'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "property_ratings" CASCADE /*application='Movely'*/[0m
+  [1m[35m (5.6ms)[0m  [1m[35mCREATE TABLE "property_ratings" ("id" bigserial primary key, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Movely'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE /*application='Movely'*/[0m
+  [1m[35m (5.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Movely'*/[0m
+  [1m[35m (4.4ms)[0m  [1m[35mALTER TABLE "properties" ADD CONSTRAINT "fk_rails_e41321a67c"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+ /*application='Movely'*/[0m
+  [1m[35m (15.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY) /*application='Movely'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Movely'*/[0m
+  [1m[35m (3.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20241225182536) /*application='Movely'*/[0m
+  [1m[35m (3.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20241225182520),
+(20241225182248); /*application='Movely'*/[0m
+  [1m[35m (8.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Movely'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Movely'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (2.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2024-12-25 18:39:06.638492', '2024-12-25 18:39:06.638495') RETURNING "key" /*application='Movely'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Movely'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'schema_sha1' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Movely'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (2.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('schema_sha1', 'e38bff873fdecdce678d5cfafcf0b397e6314a7d', '2024-12-25 18:39:06.645059', '2024-12-25 18:39:06.645061') RETURNING "key" /*application='Movely'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2399443627008332415) /*application='Movely'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Movely'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Movely'*/[0m
+Migrating to CreatePropertyRatings (20241225183446)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Movely'*/[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE TABLE "property_ratings" ("id" bigserial primary key, "property_id" bigint, "category" character varying, "score" integer, "notes" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_ed2893c204"
+FOREIGN KEY ("property_id")
+  REFERENCES "properties" ("id")
+) /*application='Movely'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK /*application='Movely'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(2399443627008332415) /*application='Movely'*/[0m
+[dotenv] Set [36mMOVELY_DATABASE_USERNAME[0m and [36mMOVELY_DATABASE_PASSWORD[0m
+[dotenv] Loaded [33m.env.local[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Movely'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Movely'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Movely'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Movely'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Movely'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Movely'*/[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[35mSET search_path TO public /*application='Movely'*/[0m
+  [1m[35m (630.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "movely_development" /*application='Movely'*/[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[35mSET search_path TO public /*application='Movely'*/[0m
+  [1m[35m (57.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "movely_test" /*application='Movely'*/[0m
+[dotenv] Set [36mMOVELY_DATABASE_USERNAME[0m and [36mMOVELY_DATABASE_PASSWORD[0m
+[dotenv] Loaded [33m.env.local[0m
+[dotenv] Set [36mMOVELY_DATABASE_USERNAME[0m and [36mMOVELY_DATABASE_PASSWORD[0m
+[dotenv] Loaded [33m.env.local[0m
+[dotenv] Set [36mMOVELY_DATABASE_USERNAME[0m and [36mMOVELY_DATABASE_PASSWORD[0m
+[dotenv] Loaded [33m.env.local[0m
+[dotenv] Set [36mMOVELY_DATABASE_USERNAME[0m and [36mMOVELY_DATABASE_PASSWORD[0m
+[dotenv] Loaded [33m.env.local[0m
+[dotenv] Set [36mMOVELY_DATABASE_USERNAME[0m and [36mMOVELY_DATABASE_PASSWORD[0m
+[dotenv] Loaded [33m.env.local[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[35mSET search_path TO public /*application='Movely'*/[0m
+  [1m[35m (45.0ms)[0m  [1m[35mCREATE DATABASE "movely_development" ENCODING = 'unicode' /*application='Movely'*/[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[35mSET search_path TO public /*application='Movely'*/[0m
+  [1m[35m (41.5ms)[0m  [1m[35mCREATE DATABASE "movely_test" ENCODING = 'unicode' /*application='Movely'*/[0m
+[dotenv] Set [36mMOVELY_DATABASE_USERNAME[0m and [36mMOVELY_DATABASE_PASSWORD[0m
+[dotenv] Loaded [33m.env.local[0m
+  [1m[35m (8.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY) /*application='Movely'*/[0m
+  [1m[35m (9.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Movely'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2399443627008332415) /*application='Movely'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Movely'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Movely'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (2.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2024-12-25 18:43:37.574935', '2024-12-25 18:43:37.574937') RETURNING "key" /*application='Movely'*/[0m
+Migrating to CreateUsers (20241225184125)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Movely'*/[0m
+  [1m[35m (7.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying NOT NULL, "encrypted_password" character varying NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Movely'*/[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email") /*application='Movely'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20241225184125') RETURNING "version" /*application='Movely'*/[0m
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT /*application='Movely'*/[0m
+Migrating to CreateProperties (20241225184153)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Movely'*/[0m
+  [1m[35m (10.2ms)[0m  [1m[35mCREATE TABLE "properties" ("id" bigserial primary key, "user_id" bigint, "address" text NOT NULL, "price" decimal, "square_footage" integer, "bedrooms" integer, "bathrooms" integer, "hoa_info" jsonb, "overall_rating" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_e41321a67c"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+) /*application='Movely'*/[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE INDEX "index_properties_on_user_id" ON "properties" ("user_id") /*application='Movely'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20241225184153') RETURNING "version" /*application='Movely'*/[0m
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT /*application='Movely'*/[0m
+Migrating to CreatePropertyRatings (20241225184245)
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN /*application='Movely'*/[0m
+  [1m[35m (10.5ms)[0m  [1m[35mCREATE TABLE "property_ratings" ("id" bigserial primary key, "property_id" bigint, "category" character varying, "score" integer, "notes" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_ed2893c204"
+FOREIGN KEY ("property_id")
+  REFERENCES "properties" ("id")
+) /*application='Movely'*/[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE INDEX "index_property_ratings_on_property_id" ON "property_ratings" ("property_id") /*application='Movely'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20241225184245') RETURNING "version" /*application='Movely'*/[0m
+  [1m[36mTRANSACTION (3.1ms)[0m  [1m[35mCOMMIT /*application='Movely'*/[0m
+Migrating to CreatePropertyImages (20241225184308)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Movely'*/[0m
+  [1m[35m (8.3ms)[0m  [1m[35mCREATE TABLE "property_images" ("id" bigserial primary key, "property_id" bigint, "image_url" text, "image_type" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_518859e3a6"
+FOREIGN KEY ("property_id")
+  REFERENCES "properties" ("id")
+) /*application='Movely'*/[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE INDEX "index_property_images_on_property_id" ON "property_images" ("property_id") /*application='Movely'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20241225184308') RETURNING "version" /*application='Movely'*/[0m
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT /*application='Movely'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2399443627008332415) /*application='Movely'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Movely'*/[0m

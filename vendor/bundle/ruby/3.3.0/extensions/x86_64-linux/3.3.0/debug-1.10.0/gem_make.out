@@ -1,0 +1,19 @@
+current directory: /home/midbar/Projects/movely/vendor/bundle/ruby/3.3.0/gems/debug-1.10.0/ext/debug
+/usr/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /home/midbar/Projects/movely/vendor/bundle/ruby/3.3.0/gems/debug-1.10.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20241225-3426277-cxwc1m sitelibdir\=./.gem.20241225-3426277-cxwc1m clean
+
+current directory: /home/midbar/Projects/movely/vendor/bundle/ruby/3.3.0/gems/debug-1.10.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20241225-3426277-cxwc1m sitelibdir\=./.gem.20241225-3426277-cxwc1m
+compiling debug.c
+compiling iseq_collector.c
+linking shared-object debug/debug.so
+
+current directory: /home/midbar/Projects/movely/vendor/bundle/ruby/3.3.0/gems/debug-1.10.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20241225-3426277-cxwc1m sitelibdir\=./.gem.20241225-3426277-cxwc1m install
+/usr/bin/install -c -m 0755 debug.so ./.gem.20241225-3426277-cxwc1m/debug
+
+current directory: /home/midbar/Projects/movely/vendor/bundle/ruby/3.3.0/gems/debug-1.10.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20241225-3426277-cxwc1m sitelibdir\=./.gem.20241225-3426277-cxwc1m clean
