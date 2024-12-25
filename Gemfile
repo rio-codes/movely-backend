@@ -42,4 +42,8 @@ group :development, :test do
   gem 'dotenv-rails'
 end
 
+# authentication service
 
+gem 'jwt'
+gem 'bcrypt'
+gem 'rack-cors'
