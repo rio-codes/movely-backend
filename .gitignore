@@ -8,11 +8,11 @@
 .bundle
 
 # Logs
-/log/*
+log/*
 !/log/.keep
 
 # Temporary files
-/tmp/*
+tmp/*
 !/tmp/.keep
 .byebug_history
 
@@ -26,3 +26,4 @@
 
 # Node
 node_modules/
+config/credentials.yml.enc
