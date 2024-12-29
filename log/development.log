@@ -473,3 +473,272 @@ FOREIGN KEY ("property_id")
   [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT /*application='Movely'*/[0m
   [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2399443627008332415) /*application='Movely'*/[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Movely'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2399443627008332415) /*application='Movely'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Movely'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Movely'*/[0m
+Migrating to RenameEncryptedPasswordToPasswordDigest (20241225215455)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Movely'*/[0m
+  [1m[35m (1.3ms)[0m  [1m[35mALTER TABLE "users" RENAME COLUMN "encrypted_password" TO "password_digest" /*application='Movely'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20241225215455') RETURNING "version" /*application='Movely'*/[0m
+  [1m[36mTRANSACTION (3.1ms)[0m  [1m[35mCOMMIT /*application='Movely'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2399443627008332415) /*application='Movely'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Movely'*/[0m
+Started POST "/api/v1/users" for ::1 at 2024-12-25 18:48:26 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Movely'*/[0m
+Processing by Api::V1::UsersController#create as HTML
+  Parameters: {"user"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*action='create',application='Movely',controller='users'*/[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `create'
+  [1m[36mUser Exists? (3.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'riorio@mailbox.org' LIMIT 1 /*action='create',application='Movely',controller='users'*/[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `create'
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES ('riorio@mailbox.org', '$2a$12$wCV/VZ2YMVq99igQPy3Y6.jE/1sHHjhFi4ov5LLHhQsGnUggLYXbW', '2024-12-26 02:48:27.365924', '2024-12-26 02:48:27.365924') RETURNING "id" /*action='create',application='Movely',controller='users'*/[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `create'
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT /*action='create',application='Movely',controller='users'*/[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `create'
+Completed 201 Created in 245ms (Views: 0.8ms | ActiveRecord: 15.1ms (2 queries, 0 cached) | GC: 18.0ms)
+
+
+Started POST "/api/v1/auth/login" for ::1 at 2024-12-28 22:58:43 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Movely'*/[0m
+  
+ActionController::RoutingError (uninitialized constant Api::V1::AuthController)
+Caused by: ActionDispatch::MissingController (uninitialized constant Api::V1::AuthController)
+Caused by: NameError (uninitialized constant Api::V1::AuthController)
+
+Information for: ActionController::RoutingError (uninitialized constant Api::V1::AuthController):
+  
+
+Information for cause: ActionDispatch::MissingController (uninitialized constant Api::V1::AuthController):
+  
+actionpack (8.0.1) lib/action_dispatch/http/request.rb:102:in `rescue in controller_class_for'
+actionpack (8.0.1) lib/action_dispatch/http/request.rb:98:in `controller_class_for'
+actionpack (8.0.1) lib/action_dispatch/http/request.rb:91:in `controller_class'
+actionpack (8.0.1) lib/action_dispatch/routing/route_set.rb:61:in `controller'
+actionpack (8.0.1) lib/action_dispatch/routing/route_set.rb:48:in `serve'
+actionpack (8.0.1) lib/action_dispatch/journey/router.rb:53:in `block in serve'
+actionpack (8.0.1) lib/action_dispatch/journey/router.rb:133:in `block in find_routes'
+actionpack (8.0.1) lib/action_dispatch/journey/router.rb:126:in `each'
+actionpack (8.0.1) lib/action_dispatch/journey/router.rb:126:in `find_routes'
+actionpack (8.0.1) lib/action_dispatch/journey/router.rb:34:in `serve'
+actionpack (8.0.1) lib/action_dispatch/routing/route_set.rb:908:in `call'
+railties (8.0.1) lib/rails/engine/lazy_route_set.rb:68:in `call'
+rack (3.1.8) lib/rack/etag.rb:29:in `call'
+rack (3.1.8) lib/rack/conditional_get.rb:43:in `call'
+rack (3.1.8) lib/rack/head.rb:15:in `call'
+activerecord (8.0.1) lib/active_record/migration.rb:671:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (8.0.1) lib/active_support/callbacks.rb:100:in `run_callbacks'
+actionpack (8.0.1) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (8.0.1) lib/rails/rack/logger.rb:41:in `call_app'
+railties (8.0.1) lib/rails/rack/logger.rb:29:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/remote_ip.rb:96:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/request_id.rb:34:in `call'
+rack (3.1.8) lib/rack/runtime.rb:24:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.1.8) lib/rack/sendfile.rb:114:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+rack-cors (2.0.2) lib/rack/cors.rb:102:in `call'
+railties (8.0.1) lib/rails/engine.rb:535:in `call'
+puma (6.5.0) lib/puma/configuration.rb:279:in `call'
+puma (6.5.0) lib/puma/request.rb:99:in `block in handle_request'
+puma (6.5.0) lib/puma/thread_pool.rb:389:in `with_force_shutdown'
+puma (6.5.0) lib/puma/request.rb:98:in `handle_request'
+puma (6.5.0) lib/puma/server.rb:468:in `process_client'
+puma (6.5.0) lib/puma/server.rb:249:in `block in run'
+puma (6.5.0) lib/puma/thread_pool.rb:166:in `block in spawn_thread'
+
+Information for cause: NameError (uninitialized constant Api::V1::AuthController):
+  
+activesupport (8.0.1) lib/active_support/inflector/methods.rb:290:in `constantize'
+activesupport (8.0.1) lib/active_support/core_ext/string/inflections.rb:74:in `constantize'
+actionpack (8.0.1) lib/action_dispatch/http/request.rb:99:in `controller_class_for'
+actionpack (8.0.1) lib/action_dispatch/http/request.rb:91:in `controller_class'
+actionpack (8.0.1) lib/action_dispatch/routing/route_set.rb:61:in `controller'
+actionpack (8.0.1) lib/action_dispatch/routing/route_set.rb:48:in `serve'
+actionpack (8.0.1) lib/action_dispatch/journey/router.rb:53:in `block in serve'
+actionpack (8.0.1) lib/action_dispatch/journey/router.rb:133:in `block in find_routes'
+actionpack (8.0.1) lib/action_dispatch/journey/router.rb:126:in `each'
+actionpack (8.0.1) lib/action_dispatch/journey/router.rb:126:in `find_routes'
+actionpack (8.0.1) lib/action_dispatch/journey/router.rb:34:in `serve'
+actionpack (8.0.1) lib/action_dispatch/routing/route_set.rb:908:in `call'
+railties (8.0.1) lib/rails/engine/lazy_route_set.rb:68:in `call'
+rack (3.1.8) lib/rack/etag.rb:29:in `call'
+rack (3.1.8) lib/rack/conditional_get.rb:43:in `call'
+rack (3.1.8) lib/rack/head.rb:15:in `call'
+activerecord (8.0.1) lib/active_record/migration.rb:671:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (8.0.1) lib/active_support/callbacks.rb:100:in `run_callbacks'
+actionpack (8.0.1) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (8.0.1) lib/rails/rack/logger.rb:41:in `call_app'
+railties (8.0.1) lib/rails/rack/logger.rb:29:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/remote_ip.rb:96:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/request_id.rb:34:in `call'
+rack (3.1.8) lib/rack/runtime.rb:24:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.1.8) lib/rack/sendfile.rb:114:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+rack-cors (2.0.2) lib/rack/cors.rb:102:in `call'
+railties (8.0.1) lib/rails/engine.rb:535:in `call'
+puma (6.5.0) lib/puma/configuration.rb:279:in `call'
+puma (6.5.0) lib/puma/request.rb:99:in `block in handle_request'
+puma (6.5.0) lib/puma/thread_pool.rb:389:in `with_force_shutdown'
+puma (6.5.0) lib/puma/request.rb:98:in `handle_request'
+puma (6.5.0) lib/puma/server.rb:468:in `process_client'
+puma (6.5.0) lib/puma/server.rb:249:in `block in run'
+puma (6.5.0) lib/puma/thread_pool.rb:166:in `block in spawn_thread'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2399443627008332415) /*application='Movely'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Movely'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Movely'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(2399443627008332415) /*application='Movely'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Movely'*/[0m
+Started POST "/api/v1/users" for ::1 at 2024-12-28 23:06:26 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Movely'*/[0m
+Processing by Api::V1::UsersController#create as HTML
+  Parameters: {"user"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*action='create',application='Movely',controller='users'*/[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `create'
+  [1m[36mUser Exists? (4.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'riorio@mailbox.org' LIMIT 1 /*action='create',application='Movely',controller='users'*/[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK /*action='create',application='Movely',controller='users'*/[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'riorio@mailbox.org' LIMIT 1 /*action='create',application='Movely',controller='users'*/[0m
+  ↳ app/controllers/api/v1/users_controller.rb:6:in `create'
+Completed 422 Unprocessable Content in 210ms (Views: 0.2ms | ActiveRecord: 9.8ms (2 queries, 0 cached) | GC: 6.6ms)
+
+
+Started POST "/api/v1/users" for ::1 at 2024-12-28 23:11:02 -0800
+Processing by Api::V1::UsersController#create as HTML
+  Parameters: {"user"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}}
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'riorio@mailbox.org' LIMIT 1 /*action='create',application='Movely',controller='users'*/[0m
+  ↳ app/controllers/api/v1/users_controller.rb:7:in `create'
+Completed 422 Unprocessable Content in 182ms (Views: 0.1ms | ActiveRecord: 2.0ms (1 query, 0 cached) | GC: 0.1ms)
+
+
+Started POST "/api/v1/auth/login" for ::1 at 2024-12-28 23:11:15 -0800
+  
+ActionController::RoutingError (uninitialized constant Api::V1::AuthController)
+Caused by: ActionDispatch::MissingController (uninitialized constant Api::V1::AuthController)
+Caused by: NameError (uninitialized constant Api::V1::AuthController)
+
+Information for: ActionController::RoutingError (uninitialized constant Api::V1::AuthController):
+  
+
+Information for cause: ActionDispatch::MissingController (uninitialized constant Api::V1::AuthController):
+  
+actionpack (8.0.1) lib/action_dispatch/http/request.rb:102:in `rescue in controller_class_for'
+actionpack (8.0.1) lib/action_dispatch/http/request.rb:98:in `controller_class_for'
+actionpack (8.0.1) lib/action_dispatch/http/request.rb:91:in `controller_class'
+actionpack (8.0.1) lib/action_dispatch/routing/route_set.rb:61:in `controller'
+actionpack (8.0.1) lib/action_dispatch/routing/route_set.rb:48:in `serve'
+actionpack (8.0.1) lib/action_dispatch/journey/router.rb:53:in `block in serve'
+actionpack (8.0.1) lib/action_dispatch/journey/router.rb:133:in `block in find_routes'
+actionpack (8.0.1) lib/action_dispatch/journey/router.rb:126:in `each'
+actionpack (8.0.1) lib/action_dispatch/journey/router.rb:126:in `find_routes'
+actionpack (8.0.1) lib/action_dispatch/journey/router.rb:34:in `serve'
+actionpack (8.0.1) lib/action_dispatch/routing/route_set.rb:908:in `call'
+railties (8.0.1) lib/rails/engine/lazy_route_set.rb:68:in `call'
+rack (3.1.8) lib/rack/etag.rb:29:in `call'
+rack (3.1.8) lib/rack/conditional_get.rb:43:in `call'
+rack (3.1.8) lib/rack/head.rb:15:in `call'
+activerecord (8.0.1) lib/active_record/migration.rb:671:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (8.0.1) lib/active_support/callbacks.rb:100:in `run_callbacks'
+actionpack (8.0.1) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (8.0.1) lib/rails/rack/logger.rb:41:in `call_app'
+railties (8.0.1) lib/rails/rack/logger.rb:29:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/remote_ip.rb:96:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/request_id.rb:34:in `call'
+rack (3.1.8) lib/rack/runtime.rb:24:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.1.8) lib/rack/sendfile.rb:114:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+rack-cors (2.0.2) lib/rack/cors.rb:102:in `call'
+railties (8.0.1) lib/rails/engine.rb:535:in `call'
+puma (6.5.0) lib/puma/configuration.rb:279:in `call'
+puma (6.5.0) lib/puma/request.rb:99:in `block in handle_request'
+puma (6.5.0) lib/puma/thread_pool.rb:389:in `with_force_shutdown'
+puma (6.5.0) lib/puma/request.rb:98:in `handle_request'
+puma (6.5.0) lib/puma/server.rb:468:in `process_client'
+puma (6.5.0) lib/puma/server.rb:249:in `block in run'
+puma (6.5.0) lib/puma/thread_pool.rb:166:in `block in spawn_thread'
+
+Information for cause: NameError (uninitialized constant Api::V1::AuthController):
+  
+activesupport (8.0.1) lib/active_support/inflector/methods.rb:290:in `constantize'
+activesupport (8.0.1) lib/active_support/core_ext/string/inflections.rb:74:in `constantize'
+actionpack (8.0.1) lib/action_dispatch/http/request.rb:99:in `controller_class_for'
+actionpack (8.0.1) lib/action_dispatch/http/request.rb:91:in `controller_class'
+actionpack (8.0.1) lib/action_dispatch/routing/route_set.rb:61:in `controller'
+actionpack (8.0.1) lib/action_dispatch/routing/route_set.rb:48:in `serve'
+actionpack (8.0.1) lib/action_dispatch/journey/router.rb:53:in `block in serve'
+actionpack (8.0.1) lib/action_dispatch/journey/router.rb:133:in `block in find_routes'
+actionpack (8.0.1) lib/action_dispatch/journey/router.rb:126:in `each'
+actionpack (8.0.1) lib/action_dispatch/journey/router.rb:126:in `find_routes'
+actionpack (8.0.1) lib/action_dispatch/journey/router.rb:34:in `serve'
+actionpack (8.0.1) lib/action_dispatch/routing/route_set.rb:908:in `call'
+railties (8.0.1) lib/rails/engine/lazy_route_set.rb:68:in `call'
+rack (3.1.8) lib/rack/etag.rb:29:in `call'
+rack (3.1.8) lib/rack/conditional_get.rb:43:in `call'
+rack (3.1.8) lib/rack/head.rb:15:in `call'
+activerecord (8.0.1) lib/active_record/migration.rb:671:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (8.0.1) lib/active_support/callbacks.rb:100:in `run_callbacks'
+actionpack (8.0.1) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (8.0.1) lib/rails/rack/logger.rb:41:in `call_app'
+railties (8.0.1) lib/rails/rack/logger.rb:29:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/remote_ip.rb:96:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/request_id.rb:34:in `call'
+rack (3.1.8) lib/rack/runtime.rb:24:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.1.8) lib/rack/sendfile.rb:114:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+rack-cors (2.0.2) lib/rack/cors.rb:102:in `call'
+railties (8.0.1) lib/rails/engine.rb:535:in `call'
+puma (6.5.0) lib/puma/configuration.rb:279:in `call'
+puma (6.5.0) lib/puma/request.rb:99:in `block in handle_request'
+puma (6.5.0) lib/puma/thread_pool.rb:389:in `with_force_shutdown'
+puma (6.5.0) lib/puma/request.rb:98:in `handle_request'
+puma (6.5.0) lib/puma/server.rb:468:in `process_client'
+puma (6.5.0) lib/puma/server.rb:249:in `block in run'
+puma (6.5.0) lib/puma/thread_pool.rb:166:in `block in spawn_thread'
+Started POST "/api/v1/auth/login" for ::1 at 2024-12-28 23:19:55 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Movely'*/[0m
+Processing by Api::V1::AuthController#login as HTML
+  Parameters: {"email"=>"[FILTERED]", "password"=>"[FILTERED]", "auth"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = 'riorio@mailbox.org' LIMIT 1 /*action='login',application='Movely',controller='auth'*/[0m
+  ↳ app/controllers/api/v1/auth_controller.rb:5:in `login'
+Completed 200 OK in 201ms (Views: 0.4ms | ActiveRecord: 5.5ms (1 query, 0 cached) | GC: 0.4ms)
+
+
